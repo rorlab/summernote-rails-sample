@@ -1,0 +1,33 @@
+<h2>Listing posts</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th class='col-md-3'>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% if @posts.any? %>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <td>
+          <%= link_to fa_icon('eye'), post %> |
+          <%= link_to fa_icon('edit'), edit_post_path(post) %> |
+          <%= link_to fa_icon('close'), post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  <% else %>
+    <tr>
+      <td colspan="2" style='background-color: #eaeaea;height:5em;line-height:5em;text-align:center;'>No entries</td>
+    </tr>
+  <% end %>
+
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Post', new_post_path, class: 'btn btn-default' %>

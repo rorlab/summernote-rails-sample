@@ -1,0 +1,15 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1.title {
+  font-weight: bold;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom:.5em;
+  margin-bottom:1em;
+}
+.actions {
+  margin-top: 3em;
+  padding:1em;
+  background-color: #eaeaea;
+}

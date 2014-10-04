@@ -1,0 +1,14 @@
+<%= alert_box "info", "Info!", notice if flash.any? %>
+
+<h1 class='title'>
+  <%= @post.title %>
+</h1>
+
+<p>
+  <%=raw @post.content %>
+</p>
+
+<div class='actions'>
+<%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-default' %>
+<%= link_to 'Back', posts_path, class: 'btn btn-default' %>
+</div>

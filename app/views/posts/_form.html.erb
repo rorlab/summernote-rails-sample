@@ -1,0 +1,25 @@
+<%= simple_form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.input :title, input_html: { class: 'form-control'} %>
+  </div>
+  <div class="form-group">
+    <%= f.input :content, class: 'summernote' %>
+  </div>
+  <div class="actions">
+    <%= f.submit class: 'btn btn-default' %>
+    <%= link_to 'Show', @post, class: 'btn btn-default' if @post.persisted? %>
+    <%= link_to 'Back', posts_path, class: 'btn btn-default' %>
+  </div>
+<% end %>
