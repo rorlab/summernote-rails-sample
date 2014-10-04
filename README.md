@@ -1,4 +1,6 @@
-# Sample Rails 4 Project for Summernote-rails v0.5.10
+# Sample Rails 4 Project for summernote-rails v0.5.10
+
+Enjoy after git cloning.
 
 ## Development Environment
 
@@ -27,7 +29,7 @@ gem 'jquery-turbolinks'
 
 And then execute:
 
-```
+```bash
 $ bundle install
 ```
 
@@ -38,7 +40,7 @@ First of all, the summernote editor works on Bootstrap and so it is assumed that
 
 In app/assets/stylesheets/application.css.scss,
 
-```
+```css
 // Bootstrap 3
 @import "bootstrap";
 @import "font-awesome";
@@ -51,7 +53,7 @@ body {padding-top:3em;}
 
 In app/assets/javascripts/application.js, you should add the following:
 
-```
+```js
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
@@ -83,7 +85,7 @@ For example, if you made a `Post` model using `scaffold generator` of Rails, you
 
 In that template file, you should add `summernote` class to the textarea input as the following:
 
-```
+```html
 <%= simple_form_for(@post) do |f| %>
   <%= f.error_notification %>
 
@@ -102,7 +104,7 @@ In that template file, you should add `summernote` class to the textarea input a
 
 And then, in `post`-dedicated coffeescript file, app/assets/javascripts/posts.js.coffee, you should add the following:
 
-```
+```js
 $ ->
 
   # to set summernote object
